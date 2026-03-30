@@ -1,0 +1,192 @@
+/* 全局样式 - 温暖纪念风格 */
+
+:root {
+  --color-bg: #fbf9f6;
+  --color-text: #3c3633;
+  --color-secondary: #78706a;
+  --color-accent: #a67c52;
+  --color-border: #e5e0db;
+  --color-card: #ffffff;
+  --spacing-unit: 8px;
+  --container-max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 2);
+}
+
+/* 标题样式 */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  color: var(--color-text);
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  color: var(--color-text);
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+  color: var(--color-text);
+}
+
+/* 卡片 */
+.card {
+  background: var(--color-card);
+  border-radius: 12px;
+  padding: calc(var(--spacing-unit) * 3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* 按钮 */
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* 网格布局 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: calc(var(--spacing-unit) * 3);
+}
+
+/* 导航 */
+.nav {
+  background: var(--color-card);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 3);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-accent);
+}
+
+/* 照片 */
+.photo {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 文字工具类 */
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+
+.mb {
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .nav-links {
+    gap: calc(var(--spacing-unit) * 1.5);
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}
